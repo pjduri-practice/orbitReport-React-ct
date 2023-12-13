@@ -1,10 +1,15 @@
-const Buttons = ({ filterByType, setSat, displaySats }) => {
+import satData from './satData'
+
+const Buttons = ({ filterByType, setSat, displayOrbitTypes }) => {
   return (
     <div>
-      <button>Placeholder Button</button>
-      <button>All Orbits</button>
+      {displayOrbitTypes.map((satType, id) =>
+        <button onClick={() => filterByType(satType)} key={id}>
+          {satType} Orbit
+        </button>)}
+      <button onClick={() => setSat(satData)}>All Orbits</button>
     </div>
-  );
-};
+  )
+}
 
-export default Buttons;
+export default Buttons
