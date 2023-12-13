@@ -6,7 +6,7 @@ const Table = ({ sat }) => {
       <thead>
         <tr>
           <th>Name</th>
-          <th>Orbit Type</th>
+          <th>Type</th>
           <th>Launch Date</th>
           <th>Status</th>
         </tr>
@@ -15,7 +15,7 @@ const Table = ({ sat }) => {
         {sat.map(s => <>
           <tr>
             <td>{s.name}</td>
-            <td>{s.orbitType}</td>
+            <td>{s.type}</td>
             <td>{s.launchDate}</td>
             <td>{s.operational ? 'Active' : 'Inactive'}</td>
           </tr>
